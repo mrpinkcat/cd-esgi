@@ -99,7 +99,7 @@ jobs:
       # déplacer le gen dans la static
       - name: Move snapshots
         run: |
-          mv ./gen ./static
+          mv ./gen/* ./static
 
       # commit et push
       - name: Commit and push shapshots
