@@ -96,6 +96,11 @@ jobs:
         run: |
           docker run -i --init --cap-add=SYS_ADMIN --network host -v ./gen:/home/pptruser/gen ghcr.io/puppeteer/puppeteer:latest node -e "$(cat snapshot.js)" http://localhost:4173 ./gen
 
+      # Change http://localhost:4173 to https://cv.bnei.dev
+      - name: Change localhost to cv.bnei.dev
+        run: |
+          sed -i 's/http:\/\/localhost:4173/https:\/\/cv.bnei.dev/g' ./gen/*.mhtml
+
       # déplacer le gen dans la static
       - name: Move snapshots
         run: |
