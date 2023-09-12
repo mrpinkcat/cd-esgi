@@ -48,6 +48,8 @@ jobs:
         run: curl -I http://localhost:4173
   
   generate-snapshots:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     needs: build-test
     steps:
