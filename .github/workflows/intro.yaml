@@ -85,6 +85,10 @@ jobs:
           pnpm preview &
           sleep 5
 
+      # Create the gen folder
+      - name: Create gen folder
+        run: mkdir gen
+
       # lancer le snapshot (commande donnée par le prof)
       - name: Generate snapshots
         run: |
