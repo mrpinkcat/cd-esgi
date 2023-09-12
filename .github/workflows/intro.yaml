@@ -83,7 +83,7 @@ jobs:
       - name: Run the server
         run: |
           pnpm preview &
-          sleep 5
+          sleep 40
 
       # lancer le snapshot (commande donnée par le prof)
       - name: Generate snapshots
